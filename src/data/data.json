@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titulo": "Peperoni",
+        "descripcion": "Lorem ipsum dolor sit amet. Eos odit enim ut maiores soluta aut ipsam voluptas eum distinctio adipisci et dolores maxime.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaycAqDt5lioixHXh-9aDZvFg9FDP8wgguS2VvU2-ydbNq0WTosP0QV0rElLH4G19vG6E&usqp=CAU",
+        "precio": 1000,  
+        "categoria":  "Pizza"  
+    },
+    {
+        "id": 2,
+        "titulo": "Margarita",
+        "descripcion": "Lorem ipsum dolor sit amet. Eos odit enim ut maiores soluta aut ipsam voluptas eum distinctio adipisci et dolores maxime.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbURx2sqQ0oC4eBvUZ4X9FaV5prWQsvDbR8nYpoks4fyA5L6tOrXrqufyCJIdX_h9-m5U&usqp=CAU",
+        "precio": 1100,  
+        "categoria":  "Pizza"      
+    },
+    {
+        "id": 3,
+        "titulo": "Caprese",
+        "descripcion": "Lorem ipsum dolor sit amet. Eos odit enim ut maiores soluta aut ipsam voluptas eum distinctio adipisci et dolores maxime.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn91i2UyeKx5Tz59WT7so5dyr_pSvk5um3weuhbwYGD7fNLZWzfZXLd6KguI99OE2JYtc&usqp=CAU",
+        "precio": 1200,  
+        "categoria":  "Pizza"      
+    }
+]

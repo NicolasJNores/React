@@ -2,12 +2,13 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import CartWidget from './CartWidget'; 
 import { FaShoppingCart, FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
  
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">Il Forno</a>
+      <Link className="logo navbar-brand" to="/"><h1>Il Forno</h1></Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -19,16 +20,16 @@ const NavBar = () => {
       >
         <FaBars />
       </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
+      <div className="botones-nav collapse navbar-collapse" id="navbarNav">
+        <ul className="menu navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="#">Inicio</a>
+            <Link className="nav-link" to="/">Inicio</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Productos</a>
+            <Link className="nav-link" to="/productos">Productos</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Contacto</a>
+            <Link className="nav-link" to="/contacto">Contacto</Link>
           </li>
         </ul>
         <CartWidget /> {}
