@@ -18,7 +18,7 @@ const ItemListContainer = ({ greeting }) => {
               setTitulo(categoria);
             }else {
               setProdctos(res);
-              setTitulo("Prodcutos");
+              setTitulo("Productos");
             }
             
           })
