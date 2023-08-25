@@ -1,9 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import CartWidget from './CartWidget'; 
-import { FaShoppingCart, FaBars } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
- 
 
 const NavBar = () => {
   return (
@@ -31,8 +30,10 @@ const NavBar = () => {
           <li className="nav-item">
             <Link className="nav-link" to="/Contacto">Contacto</Link>
           </li>
+          <li>
+            <CartWidget />
+          </li>
         </ul>
-        <CartWidget /> {}
       </div>
     </nav>
   );

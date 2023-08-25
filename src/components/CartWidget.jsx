@@ -10,10 +10,11 @@ const CartWidget = () => {
 
   return (
     <div className="cart-widget">
-      <Link to="/carrito" FaShoppingCart className="cart-icon"></Link>     
-      {itemCount > 0 && (
-        <span className="item-count">{itemCount()}</span>
-      )}
+      <Link to="/carrito" className="cart-icon">
+        <FaShoppingCart/>
+        <span className="item-count"> {itemCount()} </span>
+      </Link>    
+      
     </div>
   );
 };
