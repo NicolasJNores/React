@@ -6,13 +6,13 @@ import { CartContext } from '../context/CartContext';
  
 
 const CartWidget = () => {
-  const {itemCount}  = useContext(CartContext); 
+  const {cantidadEnCarrito}  = useContext(CartContext); 
 
   return (
     <div className="cart-widget">
       <Link to="/carrito" className="cart-icon">
         <FaShoppingCart/>
-        <span className="item-count"> {itemCount()} </span>
+        <span className="item-count"> {cantidadEnCarrito()} </span>
       </Link>    
       
     </div>

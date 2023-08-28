@@ -8,47 +8,15 @@ import Contacto from './components/Contacto';
 import { CartContext } from './context/CartContext';
 import Carrito from './components/Carrito';
 import { Link } from 'react-router-dom'
+import Checkout from './components/Checkout';
+import { CartProvider } from "./context/CartContext";
+
 
 function App() {
 
-  const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
-
-  const [carrito, setCarrito] =useState ([]);
-
-  const agregarAlCarrito = (item, cantidad ) => {
-    const itemAgregado = {...item, cantidad};
-
-    const nuevoCarrito = [...carrito];
-    const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id);
-
-    if (estaEnElCarrito){
-      estaEnElCarrito.cantidad += cantidad;
-    }else {
-      nuevoCarrito.push(itemAgregado);
-    }
-    setCarrito(nuevoCarrito);
-    
-  }
-
-  const itemCount = () => {
-    return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
-  }
-
-  const precioTotal = () => {
-    return carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
-  }
-
-  const vaciarCarrito = () => {
-    setCarrito([]);
-  }
-
-  useEffect(() => {
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-  }, [carrito])
-
   return (
       <div>
-        <CartContext.Provider value={ {carrito, carritoInicial, agregarAlCarrito, itemCount, precioTotal, vaciarCarrito} }>
+        <CartProvider>
           <BrowserRouter>
             <NavBar />
             <Routes>
@@ -57,16 +25,17 @@ function App() {
               <Route path="/Categoria" element={<ItemListContainer/>}/>
               <Route path="/Contacto" element={<Contacto/>}/>
               <Route path="/Carrito" element={<Carrito/>}/>
+              <Route path="/Checkout" element={<Checkout  />}/>
             </Routes>
           
             <ItemListContainer greeting="¡Bienvenido a Il Forno!" />
 
             
           </BrowserRouter>
-        </CartContext.Provider>
+          </CartProvider>
       </div>
   );
-};
+}
 
 export default App;
 
